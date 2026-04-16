@@ -46,6 +46,34 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<script>
+
+	function createPetal() {
+      const petal = document.createElement("div");
+      petal.classList.add("petal");
+
+      // Random horizontal start position
+      petal.style.left = Math.random() * window.innerWidth + "px";
+
+      // Random animation duration
+      const duration = 4 + Math.random() * 4;
+      petal.style.animationDuration = duration + "s";
+
+      // Random size variation
+      const size = 20 + Math.random() * 30;
+      petal.style.width = size + "px";
+      petal.style.height = size + "px";
+
+      document.body.appendChild(petal);
+
+      // Remove after animation
+      setTimeout(() => {
+        petal.remove();
+      }, duration * 1000);
+    }
+
+    // Continuously create petals
+    setInterval(createPetal, 250);</script>
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -54,7 +82,7 @@
 	<![endif]-->
 
 	</head>
-	<body style="background-color: rgba(255, 255, 255, 0.9);">
+	<body style="background-color: rgb(250, 236, 235);">
 	<div class="fh5co-loader"></div>
 
 
@@ -139,7 +167,7 @@
 					<div class="display-tc">
 						<div class="col-md-10 col-md-offset-1">
 							<div class="col-md-6 col-sm-5 text-center">
-								<div class="event-wrap animate-box">
+								<div class="event-wrap animate-box" style="background-image: url(images/haldhi.jpg); background-size: 100%;">
 									<h3>Haldhi</h3>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
@@ -233,7 +261,7 @@
 
 
 
-	<div id="fh5co-services" class="fh5co-section-gray">
+	<!-- <div id="fh5co-services" class="fh5co-section-gray">
 		<div class="container">
 			
 			<div class="row animate-box">
@@ -247,11 +275,12 @@
 
 				<div class="container animate-box" id="highlights-container">
 					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
-						<a href="#" class="popup-vimeo"><i class="icon-video2"></i></a>
+						 
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/QkdkLdMBuL0?si=bg80qYPIoyK4KVWx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>	
 						<div class="overlay"></div>
 					</div>
 				</div>
-				<!-- <script>
+				<script>
 					// Add a click event listener to the Highlights container
 					document.getElementById('highlights-container').addEventListener('click', function () {
 						const audio = document.getElementById('background-audio');
@@ -262,43 +291,16 @@
 							});
 						}
 					});
-				</script> -->
+				</script>
 			</div>
 			
-		</div>
-	</div>
+		</div> 
+	</div>  -->
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 
 	<script>
-
-	function createPetal() {
-      const petal = document.createElement("div");
-      petal.classList.add("petal");
-
-      // Random horizontal start position
-      petal.style.left = Math.random() * window.innerWidth + "px";
-
-      // Random animation duration
-      const duration = 4 + Math.random() * 4;
-      petal.style.animationDuration = duration + "s";
-
-      // Random size variation
-      const size = 20 + Math.random() * 30;
-      petal.style.width = size + "px";
-      petal.style.height = size + "px";
-
-      document.body.appendChild(petal);
-
-      // Remove after animation
-      setTimeout(() => {
-        petal.remove();
-      }, duration * 1000);
-    }
-
-    // Continuously create petals
-    setInterval(createPetal, 250);
 
 		// Function to auto-scroll to the "Events" section after 5 seconds
 		function autoScrollToEvents() {
